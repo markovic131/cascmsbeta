@@ -10,9 +10,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-12">
-            <h1>{{ $page->title }}</h1>
-            <hr>
+        <div class="col-md-8">
             {!! $page->body !!}
         </div>
     </div>
