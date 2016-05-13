@@ -9,12 +9,9 @@
     <title>
         @section('title'){{ Setting::get('core::site-name') }}@show
     </title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/lumen/bootstrap.min.css" rel="stylesheet" integrity="sha384-mvYjhBJXQ9VlNETV/xXShy849GsBHnKzVVudnMOcWUVM/6Nd2ksj8VNng5f8ylyX" crossorigin="anonymous">
-    <style>.container { max-width: 980px; }</style>
+    {!! Theme::style('css/beta.css') !!}
     <!-- <link rel="shortcut icon" href="{{-- Theme::url('favicon.ico') --}}"> -->
 
-    {{-- Theme::style('css/main.css') --}}
 </head>
 <body>
     @include('partials.navigation')
