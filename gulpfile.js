@@ -4,11 +4,10 @@ var elixir = require('laravel-elixir');
 var themeInfo = require('./theme.json');
 
 var task = elixir.Task;
-
 elixir.extend("stylistPublish", function() {
     new task("stylistPublish", function() {
         return gulp.src("").pipe(shell("php ../../artisan stylist:publish " + themeInfo.name));
-    }).watch("**/*.less");
+    }).watch("**/*.scss");
 });
 /*
  |--------------------------------------------------------------------------
@@ -24,12 +23,9 @@ elixir.extend("stylistPublish", function() {
 elixir(function (mix) {
 
     /**
-     * Compile less
+     * Compile SASS
      */
-    mix.less([
-        "main.less"
-    ], 'assets/css/beta.css')
-    .stylistPublish();
+    mix.sass('main.scss', 'assets/css/beta.css').stylistPublish();
 
     /**
      * Concat scripts
@@ -45,8 +41,8 @@ elixir(function (mix) {
      * Copy Bootstrap fonts
      */
     // mix.copy(
-    //     'resources/vendor/bootstrap/fonts',
-    //     'assets/fonts'
+    //     'resources/assets/img',
+    //     'assets/img'
     // );
 
     /**
