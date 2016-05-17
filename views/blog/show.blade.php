@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8 blog-post">
             <ul class="breadcrumb">
                 <li><a href="{{ URL::route($currentLocale . '.blog') }}">{{ trans('cascms.template_blog_title') }}</a></li>
                 <li class="active">{{ $post->title }}</li>

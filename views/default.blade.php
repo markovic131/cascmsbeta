@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-    <div class="row">
+    <div class="row default-template">
         <div class="col-md-10">
             <div class="page-header">
                 <h1>{{ $page->title }}</h1>

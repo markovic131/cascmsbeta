@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-    <div class="row">
+    <div class="row home-template">
         <div class="col-md-12">
             {!! $page->body !!}
         </div>

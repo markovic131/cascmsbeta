@@ -15,7 +15,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">{{ Setting::get('core::site-name') }}</a>
+            <a class="navbar-brand" href="/{{ LaravelLocalization::setLocale() }}">{{ Setting::get('core::site-name') }}</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             {!! Menu::render('main','navbar') !!}

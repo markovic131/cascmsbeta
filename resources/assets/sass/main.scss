@@ -1,0 +1,22 @@
+@import "cerulean/variables";
+@import "bootstrap/bootstrap";
+@import "cerulean/bootswatch";
+
+.container { max-width: 980px; }
+.site-name { font-size: 36px; }
+.blog-post {
+    article {
+        img {
+            display: block;
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+}
+.default-template, .home-template {
+    img {
+        display: block;
+        width: 100% !important;
+        height: auto !important;
+    }
+}
