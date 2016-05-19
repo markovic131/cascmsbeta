@@ -25,7 +25,16 @@ elixir(function (mix) {
     /**
      * Compile SASS
      */
-    mix.sass('main.scss', 'assets/css/beta.css').stylistPublish();
+    mix
+        .sass('cerulean.scss', 'assets/css/cerulean.css')
+        .sass('cosmo.scss', 'assets/css/cosmo.css')
+        .sass('flatly.scss', 'assets/css/flatly.css')
+        .sass('lumen.scss', 'assets/css/lumen.css')
+        .sass('paper.scss', 'assets/css/paper.css')
+        .sass('simplex.scss', 'assets/css/simplex.css')
+        .sass('superhero.scss', 'assets/css/superhero.css');
+
+    mix.stylistPublish();
 
     /**
      * Concat scripts

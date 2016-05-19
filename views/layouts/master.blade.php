@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     @section('meta')
-        <meta name="description" content="{{ Setting::get('core::site-description') }}" />
+        <meta name="description" content="{{ setting('core::site-description') }}" />
     @show
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        @section('title'){{ Setting::get('core::site-name') }}@show
+        @section('title'){{ setting('core::site-name') }}@show
     </title>
-    {!! Theme::style('css/beta.css') !!}
+    {!! Theme::style('css/'.setting('foundation::theme').'.css') !!}
     <!-- <link rel="shortcut icon" href="{{-- Theme::url('favicon.ico') --}}"> -->
 
 </head>
@@ -28,7 +28,7 @@
     {{-- Theme::script('js/all.js') --}}
 
     <?php if (Setting::has('core::google-analytics')): ?>
-        {!! Setting::get('core::google-analytics') !!}
+        {!! setting('core::google-analytics') !!}
     <?php endif; ?>
 </body>
 </html>
